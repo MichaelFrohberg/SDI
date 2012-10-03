@@ -26,4 +26,14 @@ var wakeUp = function(timeOnClock) {
 	console.log("I'll have time for breakfast!");
 	};
 	
-}
+} 
+// Boolean Function
+var myCommute = function(getReadyTime, tripToWork)
+	if (getReadyTime + tripToWork < totalCommuteTime) === true {
+		return true;
+	} else {
+		return false;
+	}
+
+myCommute(15,42);
+};
