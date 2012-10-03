@@ -3,10 +3,27 @@
 // Project 2
 // Functions and Loops
 
-// Declare variables
+// Declare global variables
 
 // All of my string variables
 var thisMorning = "\"Oh my god\" I woke up late!";
 var inaHurry = "I got ready very quickly for the interview";
-var byCar = "drive in by car";
-var byTrain = " did not take the subway";
+var onTime = "I got to my interview on time";
+var amLate = "I got to my interview late";
+// My number variables
+var totalCommuteTime = 60
+var time = 0
+// my Arrays
+commuteTimes = [15, 20, 30];
+commuteOptions = ["Car", "Bus", "Train"]
+
+//Procedure
+var wakeUp = function(timeOnClock) {
+	console.log ("I woke up this morning and realized ");
+	if (timeOnClock > 9) {
+	console.log(thisMorning);
+	} else {
+	console.log("I'll have time for breakfast!");
+	};
+	
+}
