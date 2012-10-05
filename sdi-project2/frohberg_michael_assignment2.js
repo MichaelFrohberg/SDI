@@ -53,14 +53,16 @@ var tripByCar = function (minutesByCar) {
 
 tripByCar(15);	
 
+// String Function
 
-
-//Not a Boolean Function
-/*var myCommute = function (getReadyTime, tripToWork) {
-	if ((getReadyTime + tripToWork) <= totalCommuteTime) { 
-		return console.log("true") ; 
-	} else if (getReadyTime + tripToWork >= totalCommuteTime) {
-		return console.log("false") ;
+var takeTheTrain = function (theExpress, theLocal) {
+	console.log(theExpress + "I will have 2 minutes to get there," + theLocal + "I will have 8 minutes");
 	}
-};
-myCommute(15, 42);*/
+
+takeTheTrain("By taking the express ", " and if I take the local ");
+
+
+
+
+
+
