@@ -5,19 +5,19 @@
 
 // Declare global variables
 
-// All of my string variables
+// My string variables
 var thisMorning = "\"Oh my god\" I woke up late!";
-var inaHurry = "I got ready very quickly for the interview";
 var maybeOnTime = "I might get to my interview on time";
 var amLate = "I got to my interview late";
 // My number variables
-var totalCommuteTime = 60
+var totalCommuteMinutes = 60
 var time = 0
 // my Arrays
 var commuteTimes = [15, 20, 30];
 var commuteOptions = ["Car", "Bus", "Train"]
 
 //Procedure
+
 var wakeUp = function (timeOnClock) {
 	console.log("I woke up this morning and realized ");
 	if (timeOnClock > 9) {
@@ -28,6 +28,7 @@ var wakeUp = function (timeOnClock) {
 	
 } 
 // Boolean Function
+
 var getOut = function (hasShower, hasBreakfast) {
 	if (hasShower || hasBreakfast) {
 		console.log(maybeOnTime);
@@ -38,7 +39,20 @@ var getOut = function (hasShower, hasBreakfast) {
 }
 getOut(true, false)
 
-//
+// Number Function
+
+var tripByCar = function (minutesByCar) {
+	while (minutesByCar <= 20) {
+		console.log("I have " + minutesByCar + " minutes to get to there, and " + maybeOnTime)
+		minutesByCar++;
+		}
+		if (minutesByCar = 20) {
+			console.log("I'd better take the train")
+	}
+};
+
+tripByCar(15);	
+
 
 
 //Not a Boolean Function
