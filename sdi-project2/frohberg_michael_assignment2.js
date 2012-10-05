@@ -8,18 +8,18 @@
 // All of my string variables
 var thisMorning = "\"Oh my god\" I woke up late!";
 var inaHurry = "I got ready very quickly for the interview";
-var onTime = "I got to my interview on time";
+var maybeOnTime = "I might get to my interview on time";
 var amLate = "I got to my interview late";
 // My number variables
 var totalCommuteTime = 60
 var time = 0
 // my Arrays
-commuteTimes = [15, 20, 30];
-commuteOptions = ["Car", "Bus", "Train"]
+var commuteTimes = [15, 20, 30];
+var commuteOptions = ["Car", "Bus", "Train"]
 
 //Procedure
-var wakeUp = function(timeOnClock) {
-	console.log ("I woke up this morning and realized ");
+var wakeUp = function (timeOnClock) {
+	console.log("I woke up this morning and realized ");
 	if (timeOnClock > 9) {
 	console.log(thisMorning);
 	} else {
@@ -28,17 +28,20 @@ var wakeUp = function(timeOnClock) {
 	
 } 
 // Boolean Function
-var myCommute = function(getReadyTime, tripToWork)
-	if (getReadyTime + tripToWork < totalCommuteTime) === true {
-		return true;
-	} else {
-		return false;
-	}
+var getOut = function (hasShower, hasBreakfast) {
+	if (hasShower || hasBreakfast) {
+		console.log(maybeOnTime);
+	} else if (hasShower && hasBreakfast) {
+		console.log(amlate);
+		};
 
-myCommute(15,42);
-};
+}
+getOut(true, false)
 
-// Not a Boolean Function
+//
+
+
+//Not a Boolean Function
 /*var myCommute = function (getReadyTime, tripToWork) {
 	if ((getReadyTime + tripToWork) <= totalCommuteTime) { 
 		return console.log("true") ; 
@@ -46,3 +49,4 @@ myCommute(15,42);
 		return console.log("false") ;
 	}
 };
+myCommute(15, 42);*/
