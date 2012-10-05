@@ -37,3 +37,12 @@ var myCommute = function(getReadyTime, tripToWork)
 
 myCommute(15,42);
 };
+
+// Not a Boolean Function
+/*var myCommute = function (getReadyTime, tripToWork) {
+	if ((getReadyTime + tripToWork) <= totalCommuteTime) { 
+		return console.log("true") ; 
+	} else if (getReadyTime + tripToWork >= totalCommuteTime) {
+		return console.log("false") ;
+	}
+};
