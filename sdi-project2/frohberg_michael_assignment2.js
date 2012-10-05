@@ -9,9 +9,10 @@
 var thisMorning = "\"Oh my god\" I woke up late!";
 var maybeOnTime = "I might get to my interview on time";
 var amLate = "I got to my interview late";
+var onTime = "I made it on time!"
 // My number variables
 var totalCommuteMinutes = 60
-var time = 0
+var zeroTime = 0
 // my Arrays
 var commuteTimes = [15, 20, 30];
 var commuteOptions = ["Car", "Bus", "Train"]
@@ -61,6 +62,19 @@ var takeTheTrain = function (theExpress, theLocal) {
 
 takeTheTrain("By taking the express ", " and if I take the local ");
 
+// Array Function
+
+var getToInterview = function (secondsRemain, materialsForInterview) {
+	for (secondsRemain <= 60; secondsRemain--;) {
+		console.log("I have " + secondsRemain + " left to get there")
+	}
+		if (secondsRemain != zeroTime) {
+			console.log(onTime)
+		} else {
+			console.log("Oh My God! I left my " + materialsForInterview[2])
+		}
+};
+getToInterview(120, ["Pen", "Paper", "Resume"]);
 
 
 
