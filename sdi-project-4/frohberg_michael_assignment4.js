@@ -10,39 +10,39 @@ var myLibrary = function(){
 			The surrounding parentheses 'remembers' the usage of the dash.
 			Followed by another \d{3}, (3 more digits) then "\1" recalls a second 				
 			dash. Finally ending with \d{4} indicating the final 4 digits. */
-	var phoneRegex =  /\d{3}([-])\d{3}\1\d{4}/; 
-		function isValidNumber(p){
+	var isValidNumber = function (p){
+		var phoneRegex =  /\d{3}([-])\d{3}\1\d{4}/; 	
 			var OK = phoneRegex.exec(p);
-			if (!OK) {
-				return false;
-			} else {
-				return true;
-			}
+				if (!OK) {
+					return false;
+				} else {
+					return true;
+				}
 		}
 			/* In researching proper email format I discovered that RFC822
 			is the standard which I wanted my regex to adhere to.
 			My regex will match anything that has 1 or more of letters A-Z upper/lowercase, 
 			numbers 0-9, the (_),(.),(-) symbols,	then the @ symbol. Followed by the same letter, 			number, symbol combo, then the (.) "dot sign." Ending with letter or number 2 to 4 					characters */
-	var emailRegex = 
-	/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;	
-		function isValidEmail(x){
+	var isValidEmail = function (x){
+		var emailRegex = 
+		/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;	
 			var OK = emailRegex.exec(x);
-			if (!OK) {
-				return false;
-			} else {
-				return true;
-			}
+				if (!OK) {
+						return false;
+					} else {
+						return true;
+					}
 		}
 			/*
 			*/
-	var urlRegex = 
-	/(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
-		function isValidURL(x){
+	var isValidURL = function (x){
+		var urlRegex = 
+		/(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
 			var OK = urlRegex.exec(x);
-			if (!OK) {
-				return false;
-			} else {
-				return true;	
+				if (!OK) {
+					return false;
+				} else {
+					return true;	
 				}
 			}
 	
