@@ -18,7 +18,7 @@ var myLibrary = function(){
 				} else {
 					return true;
 				}
-		}
+	}
 			/* In researching proper email format I discovered that RFC822
 			is the standard which I wanted my regex to adhere to.
 			My regex will match anything that has 1 or more of letters A-Z upper/lowercase, 
@@ -32,7 +32,7 @@ var myLibrary = function(){
 					} else {
 						return true;
 					}
-		}
+	}
 			/*
 			*/
 	var isValidURL = function (x){
@@ -44,13 +44,44 @@ var myLibrary = function(){
 				} else {
 					return true;	
 				}
-			}
+	}
+	var spltAndCptlz = function (word){
+	}
+	var chngSepartr = function (){
+	}
+	var addDcmlPlc = function (){
+	}
+	var wthnPrcnt = function (){
+	}
+	var daysBtwn = function (){
+	}
+	var rtnNmbr = function (){
+	}
+	var smllstNmbrGrtrThan = function(){
+	}
+	var rtrnTtlNmrcVal = function (){
+	}
+	var orderedArr = function (){
+	} 
+	
+	
+	
 	
 	
 			return {
 					"isValidNumber": isValidNumber,
 					"isValidEmail": isValidEmail,
-					"isValidURL": isValidURL
+					"isValidURL": isValidURL,
+					"spltAndzcptlz": spltAndCptlz,
+					"chngSepratr": chngSepratr,
+					"addDcmlPlc":addDcmlPlc,
+					"wthnPrcnt": wthnPrcnt,
+					"daysBtwn": daysBtwn,
+					"rtnNmbr": rtnNmbr,
+					"smllstNmbrGrtrThan": smllstNmbrGrtrThan,
+					"rtrnTtlNmrcVal": rtrnTtlNmrcVal,
+					"orderedArr"orderedArr
+					
 					}
 };
 
