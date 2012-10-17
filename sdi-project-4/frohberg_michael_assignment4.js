@@ -71,12 +71,13 @@ a g which tells the code to look within the entire string , and the second argum
 the replacement
  */	
 	
-	var chngSepartr = function (str){
-		return str.replace(/,/g, "and");
+	var chngSepartr = function (str, newStr){
+		return str.replace(/,/g, newStr);
 	}
-/*
+/* 
 */
-	var addDcmlPlc = function (){
+	var addDcmlPlc = function (num){
+		return num.toFixed(2);
 	}
 /*
 */
@@ -136,5 +137,5 @@ console.log("Is http://google.com a valid URL " +
 console.log("Is http.iLikeFlowersDot.Com a valid URL " +
 						newLib.isValidURL("http.iLikeFlowersDot.Com"));
 console.log(newLib.spltAndCptlz("i fell in love with a great woman"));
-console.log(newLib.chngSepartr("Cats , Dogs , Love , Happiness"));
-
+console.log(newLib.chngSepartr("Cats , Dogs , Love , Happiness", "and"));
+console.log(newLib.addDcmlPlc(17.3))
