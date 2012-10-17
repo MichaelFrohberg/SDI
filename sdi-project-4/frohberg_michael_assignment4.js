@@ -64,8 +64,12 @@ a function that will title case any string of words separated by a space */
     		return txt.charAt(0).toUpperCase() + 
     			txt.substr(1).toLowerCase();});
     }
-/*
-*/	
+
+/* Used the replace function which contains two arguments the first being 
+the original separator followed by the regex "/ /" which searches for the given character,
+a g which tells the code to look within the entire string , and the second argument is 
+the replacement
+ */	
 	
 	var chngSepartr = function (str){
 		return str.replace(/,/g, "and");
@@ -132,5 +136,5 @@ console.log("Is http://google.com a valid URL " +
 console.log("Is http.iLikeFlowersDot.Com a valid URL " +
 						newLib.isValidURL("http.iLikeFlowersDot.Com"));
 console.log(newLib.spltAndCptlz("i fell in love with a great woman"));
-console.log(newLib.chngSepartr(" Cats , Dogs , Love , Happiness"));
+console.log(newLib.chngSepartr("Cats , Dogs , Love , Happiness"));
 
