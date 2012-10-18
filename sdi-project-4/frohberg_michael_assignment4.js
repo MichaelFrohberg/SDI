@@ -61,8 +61,8 @@ a function that will title case any string of words separated by a space */
 	
 	var spltAndCptlz = function (str){
     return str.replace(/\w\S*/g, function(txt) {
-    		return txt.charAt(0).toUpperCase() + 
-    			txt.substr(1).toLowerCase();});
+    	return txt.charAt(0).toUpperCase() + 
+    	txt.substr(1).toLowerCase();});
     }
 
 /* Used the replace function which contains two arguments the first being 
@@ -74,47 +74,71 @@ the replacement
 	var chngSepartr = function (str, newStr){
 		return str.replace(/,/g, newStr);
 	}
-/* 
-*/
+
+// I used the single step method toFixed to move the decimal point 2 places
+
 	var addDcmlPlc = function (num){
 		return num.toFixed(2);
 	}
-/*
-*/
-	var wthnPrcnt = function (){
+
+/* Tough one to crack. I chose a standard and nested conditional, passed through three
+arguments the two comparisons and the percentage performed the proper and returned a single boolean. */
+	
+	var fuzzyMatch = function(x, y, z){
+    if (x > y){
+    	if ((x - y) / x * 100 === z){
+    		return true;
+    	} else {
+	    	return false;
+    	}
+    }
+  }    		
+  
+/* I created a function that passed both a start and an end argument. I then
+called the Date object which allowed me to use its methods. I parsed two dateStrings
+got a rounded difference and divided that number by the number of milliseconds in a day.*/
+	
+	var daysBtwn = function (start, end){
+		var a = new Date(start);
+		var b = new Date(end);
+			return Math.round((Date.parse(b) - Date.parse(a)) / 86400000);	
 	}
-/*
-*/
-	var daysBtwn = function (){
+
+// I used the valueOf method to return the primitive value of any given string
+	
+	var rtnNmbr = function (num){
+		return num.valueOf();
 	}
+
 /*
 */
-	var rtnNmbr = function (){
-	}
-/*
-*/
+	
 	var smllstNmbrGrtrThan = function(){
 	}
+
 /*
 */
+	
 	var rtrnTtlNmrcVal = function (){
 	}
+
 /*
 */
+	
 	var orderedArr = function (){
 	} 
 
 // 	
 		return { 
-				"isValidNumber": 				isValidNumber,
-				"isValidEmail": 				isValidEmail,
-				"isValidURL": 					isValidURL,
-				"spltAndCptlz": 				spltAndCptlz,
-				"chngSepartr": 					chngSepartr,
-				"addDcmlPlc":						addDcmlPlc,
-				"wthnPrcnt": 						wthnPrcnt,
-				"daysBtwn": 						daysBtwn,
-				"rtnNmbr": 							rtnNmbr,
+				"isValidNumber": 				isValidNumber,  //
+				"isValidEmail": 				isValidEmail,	  //
+				"isValidURL": 					isValidURL,			//
+				"spltAndCptlz": 				spltAndCptlz,   //
+				"chngSepartr": 					chngSepartr,    //
+				"addDcmlPlc":						addDcmlPlc,    //
+				"fuzzyMatch": 					fuzzyMatch,       
+				"daysBtwn": 						daysBtwn,				//
+				"rtnNmbr": 							rtnNmbr,       //
 				"smllstNmbrGrtrThan": 	smllstNmbrGrtrThan,
 				"rtrnTtlNmrcVal": 			rtrnTtlNmrcVal,
 				"orderedArr":						orderedArr
@@ -138,4 +162,8 @@ console.log("Is http.iLikeFlowersDot.Com a valid URL " +
 						newLib.isValidURL("http.iLikeFlowersDot.Com"));
 console.log(newLib.spltAndCptlz("i fell in love with a great woman"));
 console.log(newLib.chngSepartr("Cats , Dogs , Love , Happiness", "and"));
-console.log(newLib.addDcmlPlc(17.3))
+console.log(newLib.addDcmlPlc(17.3));
+console.log("Is 25 greater than or less than 38, and is it within 20%? " +  																																										newLib.fuzzyMatch(38, 25, 20));
+console.log("The string \"33\" = " + newLib.rtnNmbr("33"));
+console.log("How many days are between Aug, 6 1981 and Oct, 11 2009? " +
+						newLib.daysBtwn("August 6, 1981" , "October 11, 2009") + " days");
