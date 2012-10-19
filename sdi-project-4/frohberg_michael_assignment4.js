@@ -114,9 +114,9 @@ got a rounded difference and divided that number by the number of milliseconds i
 /*
 */
 	
-	var smllstNmbrGrtrThan = function(array, num){
-		var arrObj = new Array;
-			return
+	var smllstNmbrGrtrThan = function(num, arr){
+		var result = Math.ceil(a);
+				return result;
 	}
 
 /*
@@ -124,15 +124,16 @@ got a rounded difference and divided that number by the number of milliseconds i
 	
 	var rtrnTtlNmrcVal = function (array){
 		var total = 0;
-			var thisVal = parseInt(array[i]);			
-			for(var i = 0; i < array.length; i++){
-				if(!isNaN(thisVal)){
+			var thisVal = parseInt(array)		
+				for(var i = 0; i < array.length; i++){
+					if(!isNaN(thisVal)){
 						total += thisVal;
-							return total;
+					}
+							return thisVal;
 						
 					}
 			}
-	}
+
 
 /* I create a function and pass through array as the argument I then 
 call the Array Object by declaring a variable with the new Array property
@@ -185,3 +186,4 @@ console.log("How many days are between Aug, 6 1981 and Oct, 11 2009? " +
 						newLib.daysBtwn("August 6, 1981" , "October 11, 2009") + " days");
 console.log(newLib.orderedArr([{"Delta": 4, "Charlie": 3, "Alpha": 1, "Bravo": 2}]));
 console.log(newLib.rtrnTtlNmrcVal(["Chickens", 5, 10, 15, 100, "Love"]));
+console.log(newLib.smllstNmbrGrtrThan(8, [5, 6, 7, 10, 11, 13]));
