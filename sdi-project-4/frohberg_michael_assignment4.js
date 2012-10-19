@@ -81,18 +81,19 @@ the replacement
 		return num.toFixed(2);
 	}
 
-/* Tough one to crack. I chose a standard and nested conditional, passed through three
-arguments the two comparisons and the percentage performed the proper and returned a single boolean. */
+/* I created a function that housed the 3 arguments valOne is the first number
+valTwo is the number that valOne is compared to and percentOf I divided valOne
+by valTwo then multiplied that by 100 to get the actual percent then compared that two
+my percent argument to see if it was within by using the >= operator and returned a boolean */
 	
-	var fuzzyMatch = function(x, y, z){
-    if (x > y){
-    	if ((x - y) / x * 100 === z){
-    		return true;
+	var fuzzyMatch = function(valOne, valTwo, percentOf){
+    var actPrcnt = (valOne / valTwo) * 100
+    	if  (actPrcnt >= percentOf) {
+    		return true;	
     	} else {
-	    	return false;
+	    		return false
     	}
-    }
-  }    		
+  }
   
 /* I created a function that passed both a start and an end argument. I then
 called the Date object which allowed me to use its methods. I parsed two dateStrings
@@ -113,19 +114,34 @@ got a rounded difference and divided that number by the number of milliseconds i
 /*
 */
 	
-	var smllstNmbrGrtrThan = function(){
+	var smllstNmbrGrtrThan = function(array, num){
+		var arrObj = new Array;
+			return
 	}
 
 /*
 */
 	
-	var rtrnTtlNmrcVal = function (){
+	var rtrnTtlNmrcVal = function (array){
+		var total = 0;
+			var thisVal = parseInt(array[i]);			
+			for(var i = 0; i < array.length; i++){
+				if(!isNaN(thisVal)){
+						total += thisVal;
+							return total;
+						
+					}
+			}
 	}
 
-/*
+/* I create a function and pass through array as the argument I then 
+call the Array Object by declaring a variable with the new Array property
+which alllows me to call the sort method which sorts the array.  
 */
 	
-	var orderedArr = function (){
+	var orderedArr = function (array){
+		var newOrder =  new Array;
+			return array.sort();
 	} 
 
 // 	
@@ -136,12 +152,12 @@ got a rounded difference and divided that number by the number of milliseconds i
 				"spltAndCptlz": 				spltAndCptlz,   //
 				"chngSepartr": 					chngSepartr,    //
 				"addDcmlPlc":						addDcmlPlc,    //
-				"fuzzyMatch": 					fuzzyMatch,       
+				"fuzzyMatch": 					fuzzyMatch,    //   
 				"daysBtwn": 						daysBtwn,				//
 				"rtnNmbr": 							rtnNmbr,       //
 				"smllstNmbrGrtrThan": 	smllstNmbrGrtrThan,
 				"rtrnTtlNmrcVal": 			rtrnTtlNmrcVal,
-				"orderedArr":						orderedArr
+				"orderedArr":						orderedArr //
 					
 					}
 };
@@ -163,7 +179,9 @@ console.log("Is http.iLikeFlowersDot.Com a valid URL " +
 console.log(newLib.spltAndCptlz("i fell in love with a great woman"));
 console.log(newLib.chngSepartr("Cats , Dogs , Love , Happiness", "and"));
 console.log(newLib.addDcmlPlc(17.3));
-console.log("Is 25 greater than or less than 38, and is it within 20%? " +  																																										newLib.fuzzyMatch(38, 25, 20));
+console.log("Is 18 within 15% of 21 " + newLib.fuzzyMatch(18, 21, 15));
 console.log("The string \"33\" = " + newLib.rtnNmbr("33"));
 console.log("How many days are between Aug, 6 1981 and Oct, 11 2009? " +
 						newLib.daysBtwn("August 6, 1981" , "October 11, 2009") + " days");
+console.log(newLib.orderedArr([{"Delta": 4, "Charlie": 3, "Alpha": 1, "Bravo": 2}]));
+console.log(newLib.rtrnTtlNmrcVal(["Chickens", 5, 10, 15, 100, "Love"]));
